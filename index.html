@@ -20,18 +20,24 @@
     <div class="row justify-content-between">
       <div class="col-6">
         <div class="m-2">
-          <p>Tri Le</p>
-          <p>-Damn son...</p>
+          <p>Photo By:</p>
+          <p><span id="picauthor"></span></p>
         </div>
       </div>
-      <div class=" col-1 text-end mt-5 me-5 p-1">
+
+      <div class="col-2">
+        <button class="btn btn-outline-white" onclick="app.picsController.drawPicture()">Pic</button>
+        <button class="btn btn-outline-white">Quote</button>
+      </div>
+
+
+      <div class=" col-2 text-end mt-5 me-5 p-1 selectable" onclick="app.weathersController.toggleWeather()">
         <div class="glass text-center rounded">
-          <h5><span id="feelsLike"></span>f</h5>
-          <p id="description">Cloudy</p>
+          <h5><span id="feelsLike"></span><span id="f-c"></span></h5>
+          <p id="description"></p>
+          <p><span id="location"></span></p>
           <span id="icon">
-
           </span>
-
         </div>
       </div>
     </div>
@@ -40,15 +46,15 @@
 
   <main class="container-fluid ">
     <div class="row time" id="details">
-      <div class="col-6 m-auto ">
-        <h1 class="text-center" id="time">11:22am</h1>
+      <div class="col-5 d-flex ms-5">
+        <h1 class="text-center ms-5" id="time">11:22am</h1>
+        <p class="on-hover">(24h)</p>
       </div>
-    </div>
 
-    <div class="row" id="todo-list">
+
       <!-- SECTION this be where the todo template starts -->
-      <div class="col-4 todo-list">
-        <div class="glass rounded p-3 border border-white" style="width: 18rem;">
+      <div class="col-4 todo-list pt-5">
+        <div class="glass rounded p-3 border border-white " style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title justify-content-between d-flex flex-row">Todo
               <p> <span id="toDoTotal">0</span> left</p>
@@ -78,13 +84,13 @@
           </div>
         </div>
       </div>
-
     </div>
+
   </main>
 
 
 
-  <footer class="container-fluid ">
+  <footer class="container ">
     <p class=" text-center fs-5" id="quote">"nothing can happen till you swing the bat"</p>
     <p id="author" class="text-center pb-5 on-hover"></p>
   </footer>

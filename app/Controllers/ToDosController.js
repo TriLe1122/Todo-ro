@@ -3,19 +3,30 @@ import { sandboxServer } from "../Services/Axios.js"
 import { todosService } from "../Services/ToDosService.js"
 import { getFormData } from "../Utils/FormHandler.js"
 import { Pop } from "../Utils/Pop.js"
-import { setHTML } from "../Utils/Writer.js"
+import { setHTML, setText } from "../Utils/Writer.js"
 
 
 function drawTodos() {
   let template = ''
   appState.toDo.forEach(t => template += t.TodoTemplate)
   setHTML('todo', template)
+  // setHTML('toDoTotal', this.completed.length)
+  let checked = appState.toDo.filter(t => t.completed == false)
+  setText('toDoTotal', checked.length)
 }
+
+
+
+
+
 export class ToDosController {
   constructor() {
     this.getToDos()
     appState.on('toDo', drawTodos)
+    // appState.on('toDo', drawTotal)
   }
+
+
 
 
   async getToDos() {

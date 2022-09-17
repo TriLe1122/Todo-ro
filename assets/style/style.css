@@ -1,9 +1,10 @@
 /* BASIC STYLES HERE */
 * {
   color: aliceblue;
-  text-shadow: 1px 1px black, 0px 0px 5px rgba(250, 128, 114, 0.719);
+  text-shadow: 1px 1px black, 0px 0px 5px rgba(44, 73, 201, 0.719);
   font-weight: bold;
   letter-spacing: 0.08rem;
+  user-select: none;
 }
 
 
@@ -24,9 +25,9 @@ p {
 }
 
 
-.time {
-  margin-top: 15rem;
-}
+/* .time {
+  margin-top: 5rem;
+} */
 
 .text-shadow {
   color: aliceblue;
@@ -36,7 +37,8 @@ p {
 }
 
 .todo-list {
-  margin-left: 8rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-right: 8rem;
+
 
 }

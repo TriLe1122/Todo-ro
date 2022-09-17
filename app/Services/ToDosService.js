@@ -4,6 +4,9 @@ import { sandboxServer } from "./Axios.js"
 
 
 class ToDosService {
+  // getToDoCompleted() {
+  //   throw new Error("Method not implemented.")
+  // }
   async toggleToDo(id) {
     const toDo = appState.toDo.find(t => t.id == id)
     if (!toDo) {

@@ -3,6 +3,12 @@ import { Weather } from "../Models/Weather.js";
 import { sandboxServer } from "./Axios.js"
 
 class WeathersService {
+  toggleCelsius() {
+    let weather = appState.weather
+    weather.celcius = !weather.celcius
+    appState.emit('weather')
+  }
+
   async getWeather() {
     const res = await sandboxServer.get('/api/weather')
     console.log(res.data);

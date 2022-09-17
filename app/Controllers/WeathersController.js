@@ -6,24 +6,19 @@ import { setHTML, setText } from "../Utils/Writer.js";
 
 function drawWeather() {
   let weather = appState.weather
-  setText('feelsLike', Math.floor((weather.feels_like - 273.15) * 9 / 5 + 32))
+  setHTML('feelsLike', weather.ConverterTemplate)
   setText('description', weather.description)
   setHTML('icon', appState.weather.WeatherTemplate)
-
+  setText('location', weather.name)
 }
 
-// function drawIcon() {
-// }
 
-// (279K − 273.15) × 9 / 5 + 32 = 42.53°F
 
 export class WeathersController {
   constructor() {
     this.getWeather()
     appState.on('weather', drawWeather)
   }
-
-
   async getWeather() {
     try {
       await weathersService.getWeather()
@@ -33,4 +28,24 @@ export class WeathersController {
 
     }
   }
+
+  async toggleWeather() {
+    try {
+      await weathersService.toggleCelsius()
+    } catch (error) {
+      console.error('[toggleweather]', error);
+    }
+  }
+
+
+
+
+
+  // toggleWeather() {
+  //   let weather = appState.weather
+  //   setText('feelsLike', Math.floor((weather.feels_like - 273.15)))
+  //   setHTML('f-c', 'c')
+  // }
 }
+
+

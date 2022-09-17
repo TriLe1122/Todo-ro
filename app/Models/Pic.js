@@ -6,7 +6,7 @@ export class Pic {
     this.imgUrl = data.imgUrl
     this.largeImgUrl = data.largeImgUrl
     this.tags = data.tags
-    this.author = data.author
+    this.author = data.author || ''
     this.query = data.query
     this.id = data.id
   }
