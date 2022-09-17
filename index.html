@@ -50,9 +50,11 @@
             <h5 class="card-title justify-content-between d-flex flex-row">Todo
               <p>9 left</p>
             </h5>
+            <div class="" id="todo">
 
+            </div>
             <!-- SECTION template for the individual todo task -->
-            <div class="d-flex justify-content-between mb-1 pt-2">
+            <!-- <div class="d-flex justify-content-between mb-1 pt-2">
               <input onchange="app.Controller.toggleCheck('${this.id}')" type="checkbox" name="" id="" ${this.checked
                 ? 'checked' : '' }>
               <p class="border-bottom border-2 border-dark  px-2 text-center">Finish checkpoint
@@ -61,12 +63,12 @@
                 <i onclick="app.Controller.deleteTask('${this.id}')"
                   class="mdi mdi-delete-forever-outline  selectable"></i>
               </div>
-            </div>
+            </div> -->
 
 
-            <form onsubmit="" class="">
+            <form onsubmit="app.toDosController.addToDo()" class="">
               <div class="form-group d-flex justify-content-between mt-3">
-                <input class="" type="text" name="" placeholder="Todo-ro?" required>
+                <input class="" type="text" name="description" placeholder="Todo-ro?" required>
                 <button class="btn" type="submit"><i class="mdi mdi-plus"></i></button>
               </div>
             </form>
