@@ -10,9 +10,9 @@ class QuotesService {
         author: 'Alan Watts'
       }
     })
-    console.log('getQuote', res.data);
+
     appState.quote = new Quote(res.data)
-    console.log(appState.quote);
+
   }
 
 }

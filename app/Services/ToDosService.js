@@ -4,6 +4,20 @@ import { sandboxServer } from "./Axios.js"
 
 
 class ToDosService {
+  async toggleToDo(id) {
+    const toDo = appState.toDo.find(t => t.id == id)
+    if (!toDo) {
+      throw new Error('bad id')
+    }
+
+    toDo.completed = !toDo.completed
+    await sandboxServer.put(`/api/${appState.user}/todos/${id}`, toDo)
+    appState.emit('toDo')
+  }
+  async removeToDo(id) {
+    await sandboxServer.delete(`/api/${appState.user}/todos/${id}`)
+    appState.toDo = appState.toDo.filter(t => t.id != id)
+  }
   async addToDo(formData) {
     const res = await sandboxServer.post(`/api/${appState.user}/todos`, formData)
     console.log(res.data);

@@ -26,9 +26,12 @@
       </div>
       <div class=" col-1 text-end mt-5 me-5 p-1">
         <div class="glass text-center rounded">
-          <h5>68F</h5>
-          <p>Cloudy</p>
-          <i class="mdi mdi-cloud"></i>
+          <h5><span id="feelsLike"></span>f</h5>
+          <p id="description">Cloudy</p>
+          <span id="icon">
+
+          </span>
+
         </div>
       </div>
     </div>
@@ -38,7 +41,7 @@
   <main class="container-fluid ">
     <div class="row time" id="details">
       <div class="col-6 m-auto ">
-        <h1 class="text-center">11:22am</h1>
+        <h1 class="text-center" id="time">11:22am</h1>
       </div>
     </div>
 
@@ -48,7 +51,7 @@
         <div class="glass rounded p-3 border border-white" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title justify-content-between d-flex flex-row">Todo
-              <p>9 left</p>
+              <p> <span id="toDoTotal">0</span> left</p>
             </h5>
             <div class="" id="todo">
 

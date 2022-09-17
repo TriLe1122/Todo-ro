@@ -40,4 +40,25 @@ export class ToDosController {
       Pop.error(error)
     }
   }
+
+  async removeToDo(id) {
+    try {
+      const yes = await Pop.confirm('remove ToDo-Ro?')
+      if (!yes) { return }
+      await todosService.removeToDo(id)
+    } catch (error) {
+      console.error('[deleteToDo]', error);
+    }
+  }
+
+  async toggleToDo(id) {
+    try {
+      await todosService.toggleToDo(id)
+    } catch (error) {
+      console.error("[toggleCompleted]", error);
+      Pop.error(error)
+    }
+  }
+
+
 }
