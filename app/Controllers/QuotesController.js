@@ -16,6 +16,7 @@ function drawQuote() {
 export class QuotesController {
   constructor() {
     this.getQuote()
+    setInterval(this.getQuote, 60000)
     appState.on('quote', drawQuote)
   }
 

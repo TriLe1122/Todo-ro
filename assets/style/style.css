@@ -1,22 +1,31 @@
 /* BASIC STYLES HERE */
 * {
   color: aliceblue;
-  text-shadow: 1px 1px black, 0px 0px 5px rgba(44, 73, 201, 0.719);
+  text-shadow: 1px 1px black, 0px 0px 5px rgba(212, 24, 33, 0.719);
   font-weight: bold;
   letter-spacing: 0.08rem;
   user-select: none;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
+.ro {
+  background-color: rgba(245, 245, 245, 0.455);
+}
+
+input[type="checkbox"] {
+  accent-color: rgb(37, 33, 33);
+}
 
 
 body {
-
+  background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1758073114103109159/20B042641BF6359FEE0D9E96CE7D62205EB179A3/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
   background-size: cover;
   background-attachment: fixed;
+  background-color: rgb(51, 30, 30);
 }
 
 .glass {
-  background-color: rgba(32, 30, 30, 0.596);
+  background-color: rgba(223, 215, 215, 0.712);
 
 }
 
@@ -39,6 +48,7 @@ p {
 .todo-list {
   margin-top: 3rem;
   margin-right: 8rem;
-
+  margin-bottom: .5rem;
+  margin-left: 11rem;
 
 }

@@ -17,6 +17,8 @@ function drawPicture() {
 export class PicsController {
   constructor() {
     this.getSandboxPic()
+    setInterval(this.getSandboxPic, 60000)
+
     appState.on('Pic', drawPicture)
   }
 
