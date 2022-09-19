@@ -3,12 +3,12 @@
 
 export class Weather {
   constructor(data) {
-    this.feels_like = data.main.feels_like
+    this.feels_like = data.main.temp
     this.description = data.weather[0].description
     this.icon = data.weather[0].icon
     this.name = data.name
     this.weather = data.weather
-    this.celcius = data.celcius || false
+    this.celcius = data.celcius || true
   }
 
   get WeatherTemplate() {
@@ -21,7 +21,6 @@ export class Weather {
 
   get ConverterTemplate() {
     return /*html*/`
-
     <p>  ${this.celcius ? `${this.Farh}` + '°f' : `${this.Cels}` + '°c'}</p>
     `
   }

@@ -7,7 +7,7 @@ class QuotesService {
   async getQuote() {
     const res = await sandboxServer.get('/api/quotes', {
       params: {
-        author: 'Alan Watts'
+        author: 'Thich Nhat Hanh'
       }
     })
 

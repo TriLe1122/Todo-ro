@@ -1,49 +1,57 @@
 /* BASIC STYLES HERE */
 * {
   color: aliceblue;
-  text-shadow: 1px 1px black, 0px 0px 5px rgba(212, 24, 33, 0.719);
-  font-weight: bold;
+  text-shadow: 1px 1px black, 0px 0px 5px rgba(237, 244, 239, 0.699);
+  font-weight: bolder;
   letter-spacing: 0.08rem;
   user-select: none;
   font-family: 'Julius Sans One', sans-serif;
 }
 
+
+
+
 .ro {
-  background-color: rgba(245, 245, 245, 0.455);
+  background-color: rgba(245, 245, 245, 0.682);
 }
 
 input[type="checkbox"] {
   accent-color: rgb(37, 33, 33);
 }
 
+.scroll {
+  max-height: 12rem;
+  overflow-y: auto;
+}
 
 body {
   background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1758073114103109159/20B042641BF6359FEE0D9E96CE7D62205EB179A3/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
   background-size: cover;
   background-attachment: fixed;
-  background-color: rgb(51, 30, 30);
+  background-color: rgb(19 47 70)
 }
 
 .glass {
-  background-color: rgba(223, 215, 215, 0.712);
+  background-color: #131413b2;
 
 }
+
 
 p {
   margin: 0;
 }
 
 
-/* .time {
-  margin-top: 5rem;
-} */
+.clock {
+  font-size: 80px;
+}
 
-.text-shadow {
+/* .text-shadow {
   color: aliceblue;
   text-shadow: 1px 1px black, 0px 0px 5px rgba(250, 128, 114, 0.719);
   font-weight: bold;
   letter-spacing: 0.08rem;
-}
+} */
 
 .todo-list {
   margin-top: 3rem;

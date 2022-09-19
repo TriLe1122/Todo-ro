@@ -25,7 +25,7 @@ class ToDosService {
     const res = await sandboxServer.post(`/api/${appState.user}/todos`, formData)
     console.log(res.data);
     // appState.toDo = new Todo(res.data)
-    appState.toDo = [new Todo(res.data), ...appState.toDo]
+    appState.toDo = [...appState.toDo, new Todo(res.data)]
   }
   async getToDos() {
     const res = await sandboxServer.get(`/api/${appState.user}/todos`)

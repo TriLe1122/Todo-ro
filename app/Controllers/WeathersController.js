@@ -17,6 +17,7 @@ function drawWeather() {
 export class WeathersController {
   constructor() {
     this.getWeather()
+    // setInterval(this.getWeather, 60000)
     appState.on('weather', drawWeather)
   }
   async getWeather() {

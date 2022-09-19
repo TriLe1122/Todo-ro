@@ -28,14 +28,14 @@
         </div>
       </div>
 
-      <div class="col-2 mt-3 mx-3">
-        <button class="btn btn-outline-white text-white glass" onclick="app.picsController.getSandboxPic()">Pic</button>
-        <button class="btn btn-outline-white text-white glass" onclick="app.quotesController.getQuote()">Quote</button>
+      <div class="col-3 m-3">
+        <button class="btn btn-outline-white text-white " onclick="app.picsController.getSandboxPic()">Pic</button>
+        <button class="btn btn-outline-white text-white " onclick="app.quotesController.getQuote()">Quote</button>
       </div>
 
 
-      <div class=" col-1 text-end mt-5 me-5 p-1 selectable" onclick="app.weathersController.toggleWeather()">
-        <div class="glass text-center rounded">
+      <div class=" col-1 text-end mt-5 me-5 p-1 selectable rounded" onclick="app.weathersController.toggleWeather()">
+        <div class=" text-center rounded">
           <h5><span id="feelsLike"></span><span id="f-c"></span></h5>
           <p id="description"></p>
           <p><span id="location"></span></p>
@@ -49,14 +49,16 @@
 
   <main class="container-fluid ">
     <div class="row time" id="details">
-      <div class="col-5 d-flex ms-5 ">
+      <div class="col-5 d-flex ms-5">
         <div>
-          <h1 class="text-center ms-5  fs-1 rounded p-5" onclick="app.timesController.toggleTime()">
+          <h5>
+            <span class="on-hover ms-5 p-5" id="date"></span>
+          </h5>
+          <h1 class="text-center ms-5  fs-1 rounded pt-2" onclick="app.timesController.toggleTime()">
             <!-- 11:22am -->
-            <span class="fs-1 selectable no-select" id="time"></span>
+            <span class=" selectable no-select clock rounded" id="time"></span>
           </h1>
         </div>
-        <!-- <p class="on-hover">(24h)</p> -->
       </div>
 
 
@@ -67,7 +69,7 @@
             <h5 class="card-title justify-content-between d-flex flex-row">Todo
               <p> <span id="toDoTotal">0</span> left</p>
             </h5>
-            <div class="" id="todo">
+            <div class="scroll" id="todo">
 
             </div>
             <!-- SECTION template for the individual todo task -->
@@ -98,9 +100,13 @@
 
 
 
-  <footer class="container ">
+  <footer class="container ,t-5">
     <p class=" text-center fs-5" id="quote">"nothing can happen till you swing the bat"</p>
     <p id="author" class="text-center pb-3 on-hover"></p>
+    <div class="col-3 m-3">
+      <!-- <button class="btn btn-outline-white text-white glass" onclick="app.picsController.getSandboxPic()">Pic</button>
+      <button class="btn btn-outline-white text-white glass" onclick="app.quotesController.getQuote()">Quote</button> -->
+    </div>
   </footer>
 
 

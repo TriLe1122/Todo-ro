@@ -1,23 +1,23 @@
 import { setHTML, setText } from "../Utils/Writer.js";
 
-function time() {
-  // let today = new Date();
-  // // let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-  // let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  // // let dateTime = date + ' ' + time;
+// function time() {
+//   // let today = new Date();
+//   // // let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+//   // let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+//   // // let dateTime = date + ' ' + time;
 
-  // setHTML('time', time)
-}
+//   // setHTML('time', time)
+// }
 
 let toggleTime = true
 
 function _time() {
 
 
-  if (toggleTime == true) {
+  if (toggleTime == false) {
     let today = new Date();
     // let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds().toString().padStart(2, '0');
+    let time = today.getHours() + ":" + today.getMinutes().toString().padStart(2, '0') + ":" + today.getSeconds().toString().padStart(2, '0');
     // let dateTime = date + ' ' + time;
 
     setText('time', time)
@@ -37,6 +37,9 @@ function _time() {
     setText('time', strTime)
   }
 
+  let isoDate = new Date().toISOString()
+  let date = isoDate.substring(0, 10)
+  setHTML('date', date)
 
 }
 

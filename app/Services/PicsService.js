@@ -7,12 +7,10 @@ class PicsService {
   async getSandboxPic() {
     const res = await sandboxServer.get('/api/images', {
       params: {
-        category: 'night, japan'
+        category: 'lotus'
       }
     })
-
     appState.Pic = new Pic(res.data)
-
   }
 
 }

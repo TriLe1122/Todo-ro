@@ -16,9 +16,6 @@ function drawTodos() {
 }
 
 
-
-
-
 export class ToDosController {
   constructor() {
     this.getToDos()
