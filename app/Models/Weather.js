@@ -9,6 +9,7 @@ export class Weather {
     this.name = data.name
     this.weather = data.weather
     this.celcius = data.celcius || true
+    // this.fahrenheit = (data.feels_like - 273.15) * 9 / 5 + 32
   }
 
   get WeatherTemplate() {
